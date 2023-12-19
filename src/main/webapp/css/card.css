@@ -1,0 +1,35 @@
+.card {
+
+  perspective:600px; /*3_카드가 돌아갈때 원근법을 주기 위해-앞 뒷면 돌아가는 걸 보기 위해 부모에게 적용*/
+}
+
+.card:last-child{
+  margin-right: 0;
+}
+
+.card .cards {
+  width: 200px;
+  height: 270px;
+  border-radius:10px;
+  border:3px solid black;
+  align-items: center;
+  transition:1s;
+  position: absolute;  
+  backface-visibility:hidden; /*1_로고의 뒷면이나, 뒷카드의 앞면 둘다 숨겨져 있어야 함.*/
+  background-color: #fff;
+}
+
+.card .card-front {
+  transform: rotateY(0deg);
+
+}
+.card:hover .card-front{
+  transform: rotateY(-180deg);
+}
+.card .card-back {
+  transform: rotateY(180deg);/*2_뒷카드는 뒤집혀있어야 하므로 Y축으로 180도 돌려서 안보이게 처리*/
+}
+.card:hover .card-back{
+  transform: rotateY(0deg);
+}
+

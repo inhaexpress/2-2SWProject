@@ -1,0 +1,40 @@
+.particles{
+    height: 200px;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+
+.particles{
+
+    position: fixed;
+    z-index: 200;
+    transform-style: preserve-3d;
+}
+
+@keyframes move {
+    0%{
+        transform: translateY(0);
+        opacity: 0;
+    }
+    10% ,90%{
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(45vw);
+        opacity: 0
+    }
+}
+@keyframes rotate-container {
+    0%{
+        transform:
+            perspective(1000px)
+            translateZ(0px);
+    }
+    100%{
+        transform:
+            perspective(1000px)
+            translateZ(150px);
+    }
+}

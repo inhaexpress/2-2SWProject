@@ -1,0 +1,6 @@
+.card{
+/* animation : 효과(@keyframes 이름) 동작시간 */
+	/* animation: fadein 3s; */
+	opacity: 0;
+}
+
